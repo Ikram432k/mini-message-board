@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='/new')
+    div.form-group
+      label(for='messageUser') User Name:
+      input#messageUser.form-control(type='text' placeholder='message User' name='author_name' required='true' value="")
+      label(for='messageText') User message:
+      input#messageText.form-control(type='text' placeholder='message Text' name='author_message' required='true' value="")
+    input(type='submit', value='Submit')
+
+//-    value=(undefined===author ? '' : author.first_name) value=(undefined===author ? '' : author.family_name)
